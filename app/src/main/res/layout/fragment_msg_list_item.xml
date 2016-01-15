@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="@dimen/msg_list_item_margin"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/left_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/left_user_pic"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/left_user_head"/>
+
+        <TextView
+            android:id="@+id/left_msg_tv"
+            style="@style/left_msg_textview_style"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/left_user_pic"
+            android:text="我是左边的消息"
+            android:textSize="@dimen/msg_list_size"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/right_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/right_msg_tv"
+            style="@style/right_msg_textview_style"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/right_user_pic"
+            android:text="我是右边的消息"
+            android:textSize="@dimen/msg_list_size"/>
+
+        <ImageView
+            android:id="@+id/right_user_pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/right_user_head"/>
+    </RelativeLayout>
+
+</LinearLayout>

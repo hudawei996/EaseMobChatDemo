@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.allen.easemobchatdemo.R;
 import com.allen.easemobchatdemo.fragment.ContactListFragment;
+import com.allen.easemobchatdemo.fragment.MsgListFragment;
 import com.allen.easemobchatdemo.utils.ToastUtils;
 import com.easemob.chat.EMChatManager;
 import com.easemob.chat.EMConversation;
@@ -30,15 +31,15 @@ public class ChatActivity extends AppCompatActivity {
 
         fm = getSupportFragmentManager();
         ft = fm.beginTransaction();
-        ft.add(R.id.fragment_ll, new ContactListFragment());
+        ft.add(R.id.fragment_ll, new MsgListFragment());
         ft.commit();
 
 
         //只有注册了广播才能接收到新消息，目前离线消息，在线消息都是走接收消息的广播（离线消息目前无法监听，在登录以后，接收消息广播会执行一次拿到所有的离线消息）
-        NewMessageBroadcastReceiver msgReceiver = new NewMessageBroadcastReceiver();
-        IntentFilter intentFilter = new IntentFilter(EMChatManager.getInstance().getNewMessageBroadcastAction());
-        intentFilter.setPriority(3);
-        registerReceiver(msgReceiver, intentFilter);
+//        NewMessageBroadcastReceiver msgReceiver = new NewMessageBroadcastReceiver();
+//        IntentFilter intentFilter = new IntentFilter(EMChatManager.getInstance().getNewMessageBroadcastAction());
+//        intentFilter.setPriority(3);
+//        registerReceiver(msgReceiver, intentFilter);
 
     }
 

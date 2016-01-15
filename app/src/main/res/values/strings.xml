@@ -7,4 +7,5 @@
     <string name="confirm_pwd_hide">请输入确认密码</string>
     <string name="not_user_string">还没帐号？</string>
     <string name="register_string">注册</string>
+    <string name="sendMsg">发送</string>
 </resources>
